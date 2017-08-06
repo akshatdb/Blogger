@@ -432,4 +432,9 @@ ul{
 	background: url('page-loader.gif') 50% 50% no-repeat rgb(38, 38, 38);
 	background-size: 5%;
 }
-
+@media (max-height: 768px)
+{
+	.loader {
+		background-size:25%;
+	}
+}
