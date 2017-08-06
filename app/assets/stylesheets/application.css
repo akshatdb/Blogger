@@ -12,8 +12,5 @@
  *
  *= require_tree .
  *= require_self
- *= require nprogress
- *= require nprogress-bootstrap
- *= require nprogress-turbolinks5
  */
  custom.css

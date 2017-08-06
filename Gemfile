@@ -17,7 +17,6 @@ group :production do
   gem 'pg'
 end
 
-gem 'nprogress-rails'
 gem 'htmlentities'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
