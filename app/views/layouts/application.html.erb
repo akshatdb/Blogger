@@ -1,29 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogger</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <p class="flash">
-    <%= flash.notice %>
-  </p>
-  <div id="container">
-    <div id="content">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="/articles">Blogger</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li><a href="/articles">Home</a></li>
+      <% if logged_in?  %>
+        <li><a href="/authors">Authors</a></li>
+      <% end %>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <% if logged_in? %>
+      <li><%= link_to "#{current_user.username}", author_path(current_user.id) %></li>
+      <li><%= link_to "Logout", logout_path %></li>
+    <% else %>
+      <li><%= link_to "Signup", new_author_path %></li>
+      <li><%= link_to "Login", login_path %></li>
+    <% end %>
+    </ul>
+    </div>
+  </div>
+</nav>
+  <div class="container">
+  <div class="pad"></div>
+    <div class="row"><p class="flash">
+    <% flash.each do |key, msg| %>
+  <%= content_tag :div, msg, class: "alert alert-success" %>
+<% end %>
+  </p></div>
+    <div class="row">
+    <div class="col-sm-12">
       <%= yield %>
-      <hr>
-      <h6>
-        <% if logged_in? %>
-          <%= "Logged in as #{current_user.email}" %>
-          <%= link_to "(logout)", logout_path %>
-        <% else %>
-          <%= link_to "(login)", login_path %>
-        <% end %>
-      </h6>
+    </div>
     </div>
   </div>    
   </body>

@@ -1,14 +1,11 @@
-<p id="notice"><%= notice %></p>
-
+<div class="authors_index">
 <h1>Authors</h1>
 
-<table>
+<table class="table table-striped table-responsive">
   <thead>
     <tr>
       <th>Username</th>
       <th>Email</th>
-      <th>Password</th>
-      <th>Password confirmation</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,16 +15,15 @@
       <tr>
         <td><%= author.username %></td>
         <td><%= author.email %></td>
-        <td><%= author.password %></td>
-        <td><%= author.password_confirmation %></td>
         <td><%= link_to 'Show', author %></td>
+        <% if current_user.email == 'admin@example.com' %>
         <td><%= link_to 'Edit', edit_author_path(author) %></td>
         <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Author', new_author_path %>
+</div>
