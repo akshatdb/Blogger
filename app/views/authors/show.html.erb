@@ -9,7 +9,7 @@
   <%= @author.email %>
 </p>
 	
-<% if @author.email == current_user.email %> 
+<% if @author.email == current_user.email || @author.email == 'akshatd4@gmail.com' %> 
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <% end %>
 <%= link_to 'Back', authors_path %>
