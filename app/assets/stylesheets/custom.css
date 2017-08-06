@@ -15,7 +15,7 @@ html,body{
 		padding-right: 0;
 	}}
 body{
-	background-image: image-url(tile.gif);
+	background-image: url(tile.gif);
 	background-attachment: fixed;
 }
 .login{
