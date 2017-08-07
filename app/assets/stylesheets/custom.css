@@ -455,3 +455,6 @@ ul{
 .navbar-inverse .navbar-collapse{
 	border-color:#285de0;
 }
+.alert{
+	border-radius:0;
+}
