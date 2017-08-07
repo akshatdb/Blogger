@@ -15,7 +15,7 @@ html,body{
 		padding-right: 0;
 	}}
 body{
-	background-image: url(tile.gif);
+	background-image: url(tile.jpg);
 	background-attachment: fixed;
 }
 .login{
@@ -427,4 +427,31 @@ ul{
 	color:black;
 	text-decoration: none;
 }
-
+/*Navbar color*/
+.navbar-inverse{
+	background-color:#4477f3;
+}
+.navbar-inverse .navbar-nav>li>a{
+	color:white;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+	color:#d7d3e6;
+}
+.navbar-inverse .navbar-brand{
+	color:white;
+}
+.navbar-inverse .navbar-brand:hover{
+	color:#d7d3e6;
+}
+.navbar-inverse .navbar-toggle{
+	border:none;
+}
+.navbar-inverse .navbar-toggle:focus{
+	background-color:#4477f3;
+}
+.navbar-inverse .navbar-toggle:hover{
+	background-color:#4477f3;
+}
+.navbar-inverse .navbar-collapse{
+	border-color:#285de0;
+}
