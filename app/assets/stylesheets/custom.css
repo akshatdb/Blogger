@@ -109,7 +109,7 @@ input[type=submit]:hover{
 	margin-left:14px;
 }
 /*Index Page*/
-.index>h1, .newa>h1{
+.index>h1, .newa>h1, .tagged{
 	background:white;
 	width:90%;
 	display:block;
@@ -196,6 +196,7 @@ input[type=submit]:hover{
 .link_image{
 	display:inline;
 	height:80px;
+	width:100%;
 }
 @media (max-width: 768px)
 {
@@ -219,11 +220,15 @@ input[type=submit]:hover{
 }
 .link_title:hover{
 	text-decoration: none;
-	color:black;
+	color:#6879a0;
 }
 .link_title:active{
 	text-decoration: none;
-	color:black;
+	color:#6879a0;
+}
+.link_title:focus{
+	text-decoration: none;
+	color:#6879a0;
 }
 ul{
 	list-style-type: none;
@@ -271,11 +276,12 @@ ul{
 	padding:5px;
 	margin:25px 10px;
 }
-.panel:hover{
+.panel:hover, .panel:focus{
 	text-decoration: none;
 	color:white;
 	background-color:#c3c3c3;
 }
+
 .article_content{
 	font-size:30px;
 	font-family: fantasy;
@@ -457,4 +463,33 @@ ul{
 }
 .alert{
 	border-radius:0;
+}
+/*tags*/
+.tag_all>h1{
+	font-size:52px;
+	border-bottom: 2px solid #8ea4da;
+}
+.tag_all{
+	background-color:white;
+	border-radius:10px;
+	padding:10px;
+}
+.tags{
+	font-size:32px;
+}
+.del_tag{
+	float:right;
+	font-size:14px;
+	background-color:#e4e3e3;
+	border-radius:1px;
+	width:60px;
+	text-align: center;
+	color:grey;
+	padding:5px;
+	margin-top:10px;
+}
+.del_tag:hover, .del_tag:focus{
+		text-decoration: none;
+	color:white;
+	background-color:#c3c3c3;
 }

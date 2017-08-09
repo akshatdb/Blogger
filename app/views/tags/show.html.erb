@@ -1,7 +1,19 @@
-<h1>Articles Tagged with <%= @tag.name %></h1>
+<h1 class="tagged">Articles Tagged with <%= @tag.name %></h1>
 
 <ul>
   <% @tag.articles.each do |article| %>
-    <li><%= link_to article.title, article_path(article) %></li>
+    <li>    <div class="article_link row">
+    <div class="col-sm-2">
+      <% if article.image.exists? %>
+      	<%= image_tag article.image.url, class: "link_image" %>
+      <% else %>
+        <img src="/assets/null.gif" class="link_image">
+  	  <% end %>
+  	 </div>
+     <div class="col-sm-10">
+      <%= link_to article.title, article_path(article), class: "link_title" %>
+    	</div>
+    </div>
+    </li>
   <% end %>
 </ul>
