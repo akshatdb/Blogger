@@ -45,10 +45,15 @@ body{
 	width:50%;
 	}
 	.navbar-brand{
+	padding:5px;
 	position: absolute;
-	left:48%;
+	left:44%;
 	font-size:25px;
 	}
+	.navbar{
+	padding:10px 0;
+	border:none;
+}
 }
 .login>h1, .signup>h1{
 	font-weight: lighter;
@@ -237,8 +242,6 @@ ul{
 }
 /*Navbar*/
 .navbar{
-	padding-top: 6px;
-	padding-bottom: 6px;
 	border:none;
 }
 /*top padding*/
@@ -362,7 +365,8 @@ ul{
 .comment_view{
 	border:1px solid #8ea4da;
 	padding:10px 0;
-	padding-top: 0px
+	padding-top: 0px;
+	margin-bottom:10px;
 }
 .comment_header>*{
 	display:inline;
@@ -489,7 +493,12 @@ ul{
 	margin-top:10px;
 }
 .del_tag:hover, .del_tag:focus{
-		text-decoration: none;
+	text-decoration: none;
 	color:white;
 	background-color:#c3c3c3;
+}
+/*header*/
+.header_img{
+	width:auto;
+	height:100%;
 }
