@@ -216,12 +216,14 @@ input[type=submit]:hover{
 	}
 }
 .link_title{
+	display:inline-block;
 	float:right;
 	font-size:36px;
 	padding:10px 0px;
 	font-weight:lighter;
-	color:#z8z8z8	;
+	color:BLACK;
 	width:100%;
+	margin-bottom:-20px;
 }
 .link_title:hover{
 	text-decoration: none;
@@ -309,34 +311,32 @@ ul{
 	margin:1px;
 	}
 }
-/*comments panel*/
+/*comments or review panel*/
 .comments_panel{
 	background-color:white;
 	border-radius:10px;
 	padding:10px 30px;
 	margin-top:10px;
 }
-@media (min-width:768px)
-{
-	.comments_panel input[type=submit]{
-		width:50%;
-	}
-}
 .comments_panel>h2{
 	font-weight: bolder;
 	font-size:30px;
 }
-#new_comment input[type=text]{
+.comments_panel.row{
+		margin-right:0;
+		margin-left:0;
+	}
+.comments_panel input[type=text]{
 	border:none;
 	border-bottom:1px solid #8ea4da;
 	padding:10px;
 	font-size: 20px;
 	font-weight: lighter;
 }
-#new_comment label{
+.comments_panel label{
 	display:none;
 }
-#comment_body{
+.comments_panel textarea{
 	padding:10px;
 	border:none;
 	border:1px solid #8ea4da;
@@ -345,7 +345,7 @@ ul{
 	width:50%;
 	height:auto;
 }
-#new_comment .commentb{
+.comments_panel .commentb{
 	font-size:20px;
 	display:block;
 	font-weight: lighter;
@@ -387,6 +387,10 @@ ul{
 }
 @media (max-width: 768px)
 {
+	.comments_panel.row{
+		margin-right:10px;
+		margin-left:10px;
+	}
 	.comments_panel{
 		margin:8px;
 		padding:10px;
@@ -501,4 +505,29 @@ ul{
 .header_img{
 	width:auto;
 	height:100%;
+}
+/*ratings*/
+.rating{
+	display:inline;
+	font-size:20px;
+	margin-left:3px;
+}
+@media (max-width:768px){
+	.rating{
+		display:block;
+	}
+}
+.rating .glyphicon{
+	display:inline;
+	top:4px;
+}
+input[type=radio]{
+	display:none;
+}
+/*rating-bar*/
+.rating-bar .glyphicon{
+	font-size:30px;
+}
+.rating-bar{
+	height:40px;
 }

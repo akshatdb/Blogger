@@ -1,0 +1,27 @@
+<h2>Review</h2>
+
+<%= form_for [ @article, @review ] do |f| %>
+    <%= f.label :rating, "Rating" , class: "rating-val"%>
+    <%= f.radio_button :rating, 1 %>
+    <%= f.radio_button :rating, 2 %>
+    <%= f.radio_button :rating, 3 %>
+    <%= f.radio_button :rating, 4 %>
+    <%= f.radio_button :rating, 5 %>
+    <br>
+    <div class= "rating-bar">
+    <i class="rating-star glyphicon glyphicon-star-empty b1"></i>
+    <i class="rating-star glyphicon glyphicon-star-empty"></i>
+    <i class="rating-star glyphicon glyphicon-star-empty"></i>
+    <i class="rating-star glyphicon glyphicon-star-empty"></i>
+    <i class="rating-star glyphicon glyphicon-star-empty"></i>
+    </div>
+  <br>
+  <p>
+    <%= f.label :detail, "Review"  ,class: "commentb" %>
+    <%= f.text_area :detail %>
+  </p>
+  <br>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

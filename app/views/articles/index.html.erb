@@ -6,6 +6,7 @@
 <ul id="articles">
   <% @articles.each do |article| %>
     <li>
+    <% @avg = Review.where(:article_id => article.id).average(:rating) %> 
     <div class="article_link row">
     <div class="col-sm-2">
       <% if article.image.exists? %>
@@ -16,6 +17,12 @@
   	 </div>
      <div class="col-sm-10">
       <%= link_to article.title, article_path(article), class: "link_title" %>
+    <% @avg.to_i.times do %>
+      <i class="glyphicon glyphicon-star"></i>
+    <% end %>
+    <% (5-@avg.to_i).times do %>
+      <i class="glyphicon glyphicon-star-empty"></i>
+    <% end %>
     	</div>
     </div>
     </li>

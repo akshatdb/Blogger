@@ -8,6 +8,9 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 		@comment = Comment.new
 		@comment.article_id = @article.id
+		@review = Review.new
+		@avg = Review.where(:article_id => @article.id).average(:rating)
+		@review.article_id = @article.id
 	end
 	def new
 		@article = Article.new

@@ -5,8 +5,15 @@
 <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"}, class: "panel" %>
 <%= link_to "edit", edit_article_path(@article), class: "panel" %>
 <% end %>
-</div>
-<br>
+<div class="rating">
+Rating :
+		<% @avg.to_i.times do %>
+			<i class="glyphicon glyphicon-star"></i>
+		<% end %>
+		<% (5-@avg.to_i).times do %>
+			<i class="glyphicon glyphicon-star-empty"></i>
+		<% end %>
+</div></div>
 <p>
   Tags:
   <% @article.tags.each do |tag| %>
@@ -21,10 +28,18 @@
 </p>
 <p class= "article_content" ><%= @article.body %></p>
 </div>
-<div class="comments_panel">
+<% if logged_in? %>
+<div class = "comments_panel row">
+<div class="col-sm-6">
 <%= render partial: 'comments/form' %>
 </div>
+<div class="col-sm-6">
+<%= render partial: 'reviews/form' %>
+</div>
+</div>
+<% end %>
 <div class="comments_view">
 <h3>Comments (<%= @article.comments.size %>)</h3><br>
 <%= render partial: 'articles/comment', collection: @article.comments %>
 </div>
+
