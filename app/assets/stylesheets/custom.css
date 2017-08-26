@@ -289,7 +289,7 @@ ul{
 
 .article_content{
 	font-size:30px;
-	font-family: fantasy;
+	font-family: Times Roman;
 }
 @media (max-width:768px)
 {
@@ -309,6 +309,9 @@ ul{
 	display:inline-block;
 	width:48.5%;
 	margin:1px;
+	}
+	.article_content{
+		font-size:12px;
 	}
 }
 /*comments or review panel*/
@@ -342,7 +345,7 @@ ul{
 	border:1px solid #8ea4da;
 	font-family: Arial;
 	font-size:14px;
-	width:50%;
+	width:100%;
 	height:auto;
 }
 .comments_panel .commentb{
