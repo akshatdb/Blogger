@@ -60,7 +60,7 @@ body{
 	text-align:center;
 	color:#aaaaaa;
 }
-.login .field>input , .signup .field>input {
+.login .field>input, .signup .field>input, .field_with_errors>input{
 	color:black;
 	display:block;
 	font-family: Segoe UI Light;
@@ -533,4 +533,9 @@ input[type=radio]{
 }
 .rating-bar{
 	height:40px;
+}
+/*custom error*/
+#error_explanation
+{
+	color:red;
 }

@@ -1,4 +1,4 @@
-class ApplicationMailer < ActionMailer::Base
+class FeedbackMailer < ApplicationMailer
 	default from: "akshatd4@gmail.com"
 	def sample_email(user)
     	@user = user
