@@ -1,5 +1,5 @@
 $(document).ready(rating);
-$(document).on('page:load', rating);
+$(document).on('turbolinks:load', rating);
 
 function rating(){
 	var f = 1;
