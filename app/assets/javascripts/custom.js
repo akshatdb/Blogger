@@ -1,4 +1,7 @@
-$(document).ready(function(){
+$(document).ready(rating);
+$(document).on('page:load', rating);
+
+function rating(){
 	var f = 1;
 	$('.rating-star').mouseenter(function(){
 		$(this).prevUntil('div').andSelf().addClass("glyphicon-star").removeClass("glyphicon-star-empty");
