@@ -26,4 +26,4 @@ function rating(){
 		else 
 			f = 1;
 	})
-});
+}
