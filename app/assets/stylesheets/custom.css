@@ -516,6 +516,9 @@ ul{
 	.rating{
 		display:block;
 	}
+	.comments_panel textarea{
+		width:100%;
+	}
 }
 .rating .glyphicon{
 	display:inline;
