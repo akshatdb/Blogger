@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
 		@comment.article_id = @article.id
 		@review = Review.new
 		@avg = Review.where(:article_id => @article.id).average(:rating)
+		@imp = @article.body.summarize(:ratio => 25,:topics => true)
 		@review.article_id = @article.id
 	end
 	def new

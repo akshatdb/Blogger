@@ -8,15 +8,18 @@
     <li>
     <% @avg = Review.where(:article_id => article.id).average(:rating) %> 
     <div class="article_link row">
-    <div class="col-sm-2">
+      <div class="row">
+      <div class="col-sm-2">
       <% if article.image.exists? %>
       	<%= image_tag article.image.url, class: "link_image" %>
       <% else %>
         <img src="/assets/null.gif" class="link_image">
   	  <% end %>
   	 </div>
-     <div class="col-sm-10">
+     <div class="col-sm-6">
       <%= link_to article.title, article_path(article), class: "link_title" %>
+    </div>
+      <div class="col-sm-4 rating-row">
     <% @avg.to_i.times do %>
       <i class="glyphicon glyphicon-star"></i>
     <% end %>
@@ -25,6 +28,10 @@
     <% end %>
     	</div>
     </div>
+    <div class="article_summary row">
+        <%= article.body.summarize(:ratio => 3).force_encoding(Encoding::UTF_8) %>
+    </div>
+  </div>
     </li>
   <% end %>
 </ul>

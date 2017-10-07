@@ -25,5 +25,5 @@ function rating(){
 			f = 0;
 		else 
 			f = 1;
-	})
+	});
 }

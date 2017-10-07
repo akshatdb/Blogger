@@ -148,6 +148,11 @@ input[type=submit]:hover{
 .article_link{
 	background:white;
 	color:black;
+	position: relative;
+}
+.article_summary{
+	padding:15px;
+	margin:0px;
 }
 /*create article*/
 .create{
@@ -199,6 +204,7 @@ input[type=submit]:hover{
 	margin-top:20px;
 }
 .link_image{
+	border-top-left-radius: 10px;
 	display:inline;
 	height:80px;
 	width:100%;
@@ -533,6 +539,14 @@ input[type=radio]{
 }
 .rating-bar{
 	height:40px;
+}
+.rating-row{
+	font-size:30px;
+	color: #ff9b00;
+	position: absolute;
+	top:15%;
+	right:5%;
+	text-align: right;
 }
 /*custom error*/
 #error_explanation

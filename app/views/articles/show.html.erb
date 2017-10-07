@@ -18,7 +18,9 @@ Rating :
   Tags:
   <% @article.tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
-  <% end %>
+  <% end %><br>
+  Topics:
+  <%= @imp[1].force_encoding(Encoding::UTF_8) %>
 </p>
 <br>
 <p>
