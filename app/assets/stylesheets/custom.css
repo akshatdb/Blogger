@@ -152,7 +152,7 @@ input[type=submit]:hover{
 }
 .article_summary{
 	padding:15px;
-	margin:0px;
+	margin:0px;	
 }
 /*create article*/
 .create{
@@ -542,11 +542,16 @@ input[type=radio]{
 }
 .rating-row{
 	font-size:30px;
-	color: #ff9b00;
+	color: #ff9b00;	
+}
+@media (min-width: 768px){
+.rating-row{
 	position: absolute;
-	top:15%;
-	right:5%;
+	top:20%;
+	right:0%;
 	text-align: right;
+	font-size:20px;
+}
 }
 /*custom error*/
 #error_explanation

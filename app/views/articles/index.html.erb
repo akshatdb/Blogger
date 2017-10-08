@@ -4,7 +4,7 @@
   <%= link_to HTMLEntities.new.decode('&#10010;'), new_article_path, class: "new_btn" %>
 <% end %></h1>
 <ul id="articles">
-  <% @articles.each do |article| %>
+  <% @articles.sort_by{|a| a.title}.each do |article| %>
     <li>
     <% @avg = Review.where(:article_id => article.id).average(:rating) %> 
     <div class="article_link row">
