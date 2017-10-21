@@ -18,6 +18,8 @@ group :production do
 end
 
 gem 'htmlentities'
+gem 'httparty'
+gem 'nokogiri'
 gem 'summarize'
 gem 'glib2'
 gem 'libxml-ruby'

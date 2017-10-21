@@ -1,5 +1,9 @@
 $(document).ready(rating);
 $(document).on('turbolinks:load', rating);
+$(document).ready(navBar);
+$(document).on('turbolinks:load', navBar);
+$(document).ready(screenLoader);
+$(document).on('turbolinks:load', screenLoader);
 
 function rating(){
 	var f = 1;
@@ -25,5 +29,26 @@ function rating(){
 			f = 0;
 		else 
 			f = 1;
+	});
+}
+
+function navBar(){
+	$('.navbar-header').on('click touch',function(){
+    	$('.navbar-collapse').slideToggle();
+	});
+}
+
+function screenLoader(){
+	$(window).load(function(){
+		$('.loader').fadeOut();
+		$(document).on('turbolinks:load',function(){
+			$('.loader').fadeOut();
+	});
+	})
+	$(document).on('turbolinks:click turbolinks:touch', function(){
+		$('.loader').fadeIn();
+	});
+	$(document).on('click','input[type=submit]', function(){
+		$('.loader').fadeIn();
 	});
 }
